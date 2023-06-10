@@ -53,29 +53,6 @@ const CajaDeNotas = (props) => {
   );
 };
 
-function BasicPiano() {
-  return (
-    <SoundfontProvider
-      instrumentName="acoustic_grand_piano"
-      audioContext={audioContext}
-      hostname={soundfontHostname}
-      render={({ isLoading, playNote, stopNote, notesSoFar }) => (
-        <div>
-          <Piano
-            noteRange={noteRange}
-            width={300}
-            playNote={playNote}
-            stopNote={stopNote}
-            disabled={isLoading}
-            keyboardShortcuts={keyboardShortcuts}
-          />
-          <CajaDeNotas notesSoFar={notesSoFar} />
-        </div>
-      )}
-    />
-  );
-}
-
 function ResponsivePiano(props) {
   return (
     <DimensionsProvider>
